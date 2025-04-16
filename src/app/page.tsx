@@ -2,8 +2,7 @@ import Image from "next/image";
 export default function Home() {
   return (
     <div>
-      <Image src="/logo.svg" width={50} height={50} alt="logo" />
-      <p>Qatoto</p>
+      <Image src="/website_logo.svg" width={107} height={40} alt="logo" />
     </div>
   );
 }
