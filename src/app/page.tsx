@@ -58,13 +58,18 @@ export default function Home() {
       </div>
 
       <div className="flex gap-2 py-2 pr-6">
-        <Image
-          src="/notifications_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg"
-          width={40}
-          height={40}
-          alt="Notifications"
-          className="border-[#CCE8E9] border-1 w-10 h-10 p-2 cursor-pointer rounded-full"
-        />
+        <button
+          type="button"
+          className="w-10 h-10 flex justify-center items-center border border-[#CCE8E9] rounded-full cursor-pointer"
+        >
+          <Image
+            src="/notifications_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg"
+            width={24}
+            height={24}
+            alt="Notifications"
+          />
+        </button>
+
         <button
           type="button"
           className="w-10 h-10 flex justify-center items-center border border-[#CCE8E9] rounded-full cursor-pointer"
