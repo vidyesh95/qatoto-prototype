@@ -25,10 +25,10 @@ export default function Home() {
       </div>
 
       {/* Center: Search bar */}
-      <div className="w-[640px] pl-12 flex items-center gap-2">
+      <div className="w-160 pl-12 flex items-center gap-2">
         <form
           action="/search"
-          className="w-full h-[40px] flex items-center border-[#CCE8E9] border rounded-full"
+          className="flex h-10 flex-1 items-center border-[#CCE8E9] border rounded-full"
         >
           {/* On submission, the input value will be appended to
           the URL, e.g. /search?query=abc */}
