@@ -25,7 +25,7 @@ export default function Home() {
       </div>
 
       {/* Center: Search bar */}
-      <div className="w-160 pl-12 flex items-center gap-2">
+      <search className="w-160 pl-12 flex items-center gap-2">
         <form
           action="/search"
           className="flex h-10 flex-1 items-center border-[#CCE8E9] border rounded-full"
@@ -63,7 +63,7 @@ export default function Home() {
             alt="Search with your voice"
           />
         </button>
-      </div>
+      </search>
 
       {/* Right: Icons and Sign in */}
       <div className="flex gap-2">
