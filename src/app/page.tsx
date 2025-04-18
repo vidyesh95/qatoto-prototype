@@ -3,8 +3,8 @@ import Form from "next/form";
 
 export default function Home() {
   return (
-    <section className="w-full bg-gray-500 flex justify-between">
-      <div className="flex pl-5 py-2 bg-amber-800 gap-5">
+    <section className="w-full bg-white flex justify-between py-2 pl-5 pr-6">
+      <div className="flex bg-amber-800 gap-5">
         <Image
           src="/menu_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg"
           width={40}
@@ -21,10 +21,11 @@ export default function Home() {
         />
       </div>
 
-      <div className="w-[640px] pl-12 flex items-center gap-2 bg-amber-500">
+      {/* Center: Search bar */}
+      <div className="w-[640px] pl-12 flex items-center gap-2">
         <Form
           action="/search"
-          className="w-full h-[40px] flex items-center bg-green-500 border-[#CCE8E9] border-1 rounded-full"
+          className="w-full h-[40px] flex items-center border-[#CCE8E9] border rounded-full"
         >
           {/* On submission, the input value will be appended to
           the URL, e.g. /search?query=abc */}
@@ -33,31 +34,35 @@ export default function Home() {
             name="query"
             id="search-bar"
             placeholder="Search"
-            className="h-[40px] w-full px-4"
+            className="h-10 flex-1 px-4 overflow-hidden bg-transparent outline-none"
           />
           <button
             type="submit"
-            className="bg-[#CCE8E9] w-[50px] h-[40px] cursor-pointer pl-2 rounded-r-full"
+            className="bg-[#CCE8E9] w-12 h-10 flex pl-2 items-center rounded-r-full cursor-pointer"
           >
             <Image
               src="/search_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg"
               width={24}
               height={24}
               alt="Search with your voice"
-              className="w-[24px] h-[24px]"
             />
           </button>
         </Form>
-        <Image
-          src="/mic_24dp_1F1F1F_FILL0_wght0_GRAD0_opszNaN.svg"
-          width={40}
-          height={40}
-          alt="Search with your voice"
-          className="w-[40px] h-[40px] bg-[#CCE8E9] p-2 cursor-pointer rounded-full"
-        />
+        <button
+          type="button"
+          className="w-10 h-10 flex justify-center items-center bg-[#CCE8E9] rounded-full cursor-pointer"
+        >
+          <Image
+            src="/mic_24dp_1F1F1F_FILL0_wght0_GRAD0_opszNaN.svg"
+            width={24}
+            height={24}
+            alt="Search with your voice"
+          />
+        </button>
       </div>
 
-      <div className="flex gap-2 py-2 pr-6">
+      {/* Right: Icons and Sign in */}
+      <div className="flex gap-2">
         <button
           type="button"
           className="w-10 h-10 flex justify-center items-center border border-[#CCE8E9] rounded-full cursor-pointer"
