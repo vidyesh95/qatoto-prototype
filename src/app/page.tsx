@@ -51,22 +51,22 @@ export default function Home() {
         />
       </div>
 
-      <div className="bg-amber-600 flex gap-2 py-2 pr-6">
+      <div className="flex gap-2 py-2 pr-6">
         <Image
           src="/notifications_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg"
           width={40}
           height={40}
           alt="Notifications"
-          className="border-[#CCE8E9] border-1 w-[40px] h-[40px] p-2 cursor-pointer rounded-full"
+          className="border-[#CCE8E9] border-1 w-10 h-10 p-2 cursor-pointer rounded-full"
         />
         <Image
           src="/translate_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg"
           width={40}
           height={40}
           alt="Search with your voice"
-          className="border-[#CCE8E9] border-1 w-[40px] h-[40px] p-2 cursor-pointer rounded-full"
+          className="border-[#CCE8E9] border-1 w-10 h-10 p-2 cursor-pointer rounded-full"
         />
-        <div className="h-[40px] flex items-center px-2.5 gap-2.5 border-[#1DBDC5] border-1 cursor-pointer rounded-full">
+        <button className="h-10 flex items-center px-2.5 gap-2.5 border-[#1DBDC5] border-1 cursor-pointer rounded-full">
           <Image
             src="/account_circle_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg"
             width={24}
@@ -74,8 +74,8 @@ export default function Home() {
             alt="Search with your voice"
             className="w-[24px] h-[24px]"
           />
-          <p className="text-[#1DBDC5]">Sign in</p>
-        </div>
+          <span className="text-[#1DBDC5] font-medium">Sign in</span>
+        </button>
       </div>
     </section>
   );
