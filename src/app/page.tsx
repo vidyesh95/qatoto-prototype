@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { useState } from "react";
 
 export default function Home() {
@@ -14,17 +13,20 @@ export default function Home() {
           type="button"
           className="w-10 h-10 flex justify-center items-center cursor-pointer"
         >
-          <Image
+          <img
             src="/menu_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg"
-            width={24}
-            height={24}
+            className="w-6 h-6"
             alt="menu"
           />
         </button>
 
         {/* Qatoto logo */}
         <button type="button" className="cursor-pointer">
-          <Image src="/website_logo.svg" width={107} height={40} alt="logo" />
+          <img
+            src="/website_logo.svg"
+            className="w-[107px] h-[40px]"
+            alt="logo"
+          />
         </button>
       </div>
 
@@ -41,10 +43,9 @@ export default function Home() {
           {/* Search icon that appears when active */}
           {isSearchActive && (
             <div className="absolute left-3 top-1/2 -translate-y-1/2">
-              <Image
+              <img
                 src="/search_24dp_9CA3AF_FILL0_wght400_GRAD0_opsz24.svg"
-                width={24}
-                height={24}
+                className="w-6 h-6"
                 alt="Search"
               />
             </div>
@@ -68,10 +69,9 @@ export default function Home() {
             type="submit"
             className="bg-[#CCE8E9] w-12 h-10 flex pl-2 items-center rounded-r-full cursor-pointer"
           >
-            <Image
+            <img
               src="/search_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg"
-              width={24}
-              height={24}
+              className="w-6 h-6"
               alt="Search with your voice"
             />
           </button>
@@ -81,10 +81,9 @@ export default function Home() {
           type="button"
           className="w-10 h-10 flex justify-center items-center bg-[#CCE8E9] rounded-full cursor-pointer"
         >
-          <Image
+          <img
             src="/mic_24dp_1F1F1F_FILL0_wght0_GRAD0_opszNaN.svg"
-            width={24}
-            height={24}
+            className="w-6 h-6"
             alt="Search with your voice"
           />
         </button>
@@ -96,10 +95,9 @@ export default function Home() {
           type="button"
           className="w-10 h-10 flex justify-center items-center border border-[#CCE8E9] rounded-full cursor-pointer"
         >
-          <Image
+          <img
             src="/notifications_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg"
-            width={24}
-            height={24}
+            className="w-6 h-6"
             alt="Notifications"
           />
         </button>
@@ -108,10 +106,9 @@ export default function Home() {
           type="button"
           className="w-10 h-10 flex justify-center items-center border border-[#CCE8E9] rounded-full cursor-pointer"
         >
-          <Image
+          <img
             src="/translate_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg"
-            width={24}
-            height={24}
+            className="w-6 h-6"
             alt="Search with your voice"
           />
         </button>
@@ -120,12 +117,10 @@ export default function Home() {
           type="button"
           className="h-10 flex items-center px-2.5 gap-2.5 border-[#1DBDC5] border-1 cursor-pointer rounded-full"
         >
-          <Image
+          <img
             src="/account_circle_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg"
-            width={24}
-            height={24}
             alt="Search with your voice"
-            className="w-[24px] h-[24px]"
+            className="w-6 h-6"
           />
           <span className="text-[#1DBDC5] font-medium">Sign in</span>
         </button>
