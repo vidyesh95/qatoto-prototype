@@ -22,7 +22,10 @@ export default function Home() {
       </div>
 
       <div className="w-[640px] pl-12 flex items-center gap-2 bg-amber-500">
-        <Form action="/search" className="w-full h-[40px] flex items-center bg-green-500 border-[#CCE8E9] border-1 rounded-full">
+        <Form
+          action="/search"
+          className="w-full h-[40px] flex items-center bg-green-500 border-[#CCE8E9] border-1 rounded-full"
+        >
           {/* On submission, the input value will be appended to
           the URL, e.g. /search?query=abc */}
           <input
@@ -32,7 +35,10 @@ export default function Home() {
             placeholder="Search"
             className="h-[40px] w-full px-4"
           />
-          <button type="submit" className="bg-[#CCE8E9] w-[50px] h-[40px] cursor-pointer pl-2 rounded-r-full">
+          <button
+            type="submit"
+            className="bg-[#CCE8E9] w-[50px] h-[40px] cursor-pointer pl-2 rounded-r-full"
+          >
             <Image
               src="/search_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg"
               width={24}
@@ -59,14 +65,22 @@ export default function Home() {
           alt="Notifications"
           className="border-[#CCE8E9] border-1 w-10 h-10 p-2 cursor-pointer rounded-full"
         />
-        <Image
-          src="/translate_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg"
-          width={40}
-          height={40}
-          alt="Search with your voice"
-          className="border-[#CCE8E9] border-1 w-10 h-10 p-2 cursor-pointer rounded-full"
-        />
-        <button className="h-10 flex items-center px-2.5 gap-2.5 border-[#1DBDC5] border-1 cursor-pointer rounded-full">
+        <button
+          type="button"
+          className="w-10 h-10 flex justify-center items-center border border-[#CCE8E9] rounded-full cursor-pointer"
+        >
+          <Image
+            src="/translate_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg"
+            width={24}
+            height={24}
+            alt="Search with your voice"
+          />
+        </button>
+
+        <button
+          type="button"
+          className="h-10 flex items-center px-2.5 gap-2.5 border-[#1DBDC5] border-1 cursor-pointer rounded-full"
+        >
           <Image
             src="/account_circle_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg"
             width={24}
