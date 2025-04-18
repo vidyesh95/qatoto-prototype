@@ -1,6 +1,10 @@
+"use client";
+
 import Image from "next/image";
+import { useState } from "react";
 
 export default function Home() {
+  const [isSearchActive, setIsSearchActive] = useState(false);
   return (
     <section className="w-full bg-white flex justify-between py-2 pl-5 pr-6">
       {/* Left: Hamburger and Qatoto */}
@@ -25,11 +29,27 @@ export default function Home() {
       </div>
 
       {/* Center: Search bar */}
-      <search className="w-160 pl-12 flex items-center gap-2">
+      <search
+        className={`w-160 flex items-center gap-2 transition-all ${
+          isSearchActive ? "pl-5" : "pl-12"
+        }`}
+      >
         <form
           action="/search"
-          className="flex h-10 flex-1 items-center border-[#CCE8E9] border rounded-full"
+          className="flex h-10 flex-1 items-center border-[#CCE8E9] border rounded-full relative"
         >
+          {/* Search icon that appears when active */}
+          {isSearchActive && (
+            <div className="absolute left-3 top-1/2 -translate-y-1/2">
+              <Image
+                src="/search_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg"
+                width={24}
+                height={24}
+                alt="Search"
+              />
+            </div>
+          )}
+
           {/* On submission, the input value will be appended to
           the URL, e.g. /search?query=abc */}
           <input
@@ -37,7 +57,12 @@ export default function Home() {
             name="query"
             id="search-bar"
             placeholder="Search"
-            className="h-10 flex-1 px-4 overflow-hidden bg-transparent outline-none"
+            className={`h-10 flex-1 px-4 overflow-hidden bg-transparent outline-none ${
+              isSearchActive ? "pl-11" : ""
+            }`}
+            onFocus={() => setIsSearchActive(true)}
+            onBlur={(e) => !e.target.value && setIsSearchActive(false)}
+            onChange={(e) => setIsSearchActive(!!e.target.value)}
           />
           <button
             type="submit"
@@ -51,7 +76,7 @@ export default function Home() {
             />
           </button>
         </form>
-        
+
         <button
           type="button"
           className="w-10 h-10 flex justify-center items-center bg-[#CCE8E9] rounded-full cursor-pointer"
