@@ -4,21 +4,25 @@ import Form from "next/form";
 export default function Home() {
   return (
     <section className="w-full bg-white flex justify-between py-2 pl-5 pr-6">
-      <div className="flex bg-amber-800 gap-5">
-        <Image
-          src="/menu_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg"
-          width={40}
-          height={40}
-          alt="menu"
-          className="bg-red-500 w-[40px] h-[40px] p-2 cursor-pointer"
-        />
-        <Image
-          src="/website_logo.svg"
-          className="bg-green-400 self-center cursor-pointer"
-          width={107}
-          height={40}
-          alt="logo"
-        />
+      {/* Left: Hamburger and Qatoto */}
+      <div className="flex items-center gap-5">
+        {/* Hamburger menu */}
+        <button
+          type="button"
+          className="w-10 h-10 flex justify-center items-center cursor-pointer"
+        >
+          <Image
+            src="/menu_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg"
+            width={24}
+            height={24}
+            alt="menu"
+          />
+        </button>
+
+        {/* Qatoto logo */}
+        <button type="button" className="cursor-pointer">
+          <Image src="/website_logo.svg" width={107} height={40} alt="logo" />
+        </button>
       </div>
 
       {/* Center: Search bar */}
