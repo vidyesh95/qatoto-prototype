@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 
-export default function Home() {
+export default function Page() {
   const [isSearchActive, setIsSearchActive] = useState(false);
   return (
     <section className="w-full bg-white flex justify-between py-2 pl-5 pr-6">
