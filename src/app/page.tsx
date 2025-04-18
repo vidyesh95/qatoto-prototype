@@ -42,7 +42,7 @@ export default function Home() {
           {isSearchActive && (
             <div className="absolute left-3 top-1/2 -translate-y-1/2">
               <Image
-                src="/search_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg"
+                src="/search_24dp_9CA3AF_FILL0_wght400_GRAD0_opsz24.svg"
                 width={24}
                 height={24}
                 alt="Search"
