@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Form from "next/form";
 
 export default function Home() {
   return (
@@ -27,7 +26,7 @@ export default function Home() {
 
       {/* Center: Search bar */}
       <div className="w-[640px] pl-12 flex items-center gap-2">
-        <Form
+        <form
           action="/search"
           className="w-full h-[40px] flex items-center border-[#CCE8E9] border rounded-full"
         >
@@ -51,7 +50,8 @@ export default function Home() {
               alt="Search with your voice"
             />
           </button>
-        </Form>
+        </form>
+        
         <button
           type="button"
           className="w-10 h-10 flex justify-center items-center bg-[#CCE8E9] rounded-full cursor-pointer"
