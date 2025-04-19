@@ -8,6 +8,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://qatoto.com"), // Add this line
   title: "Qatoto", // Default title, can be overridden by pages
   description: "Wholesale live marketplace and video sharing website.",
   keywords: ["Qatoto", "Anime", "Shop", "lifestyle", "Research","Product development", "Find cofounder", "Find teammates"],
