@@ -30,7 +30,7 @@ export default function Page() {
 
       {/* Center: Search bar */}
       <search
-        className={`w-160 flex items-center gap-2 transition-all ${
+        className={`w-160 flex items-center gap-2 ${
           isSearchActive ? "pl-5" : "pl-12"
         }`}
       >
